@@ -1,0 +1,7 @@
+global_palette.h
+global_palette.c
+growmi_mag_tail.h
+growmi_mag_tail.c
+growmi_snake_head.h
+growmi_snake_head.c
+gfx.h

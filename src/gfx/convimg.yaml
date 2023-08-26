@@ -1,0 +1,22 @@
+palettes:
+  - name: global_palette
+    fixed-entries:
+      - color: {index: 0, r: 255, g: 255, b: 255}
+    images: automatic
+
+converts:
+  - name: sprite
+    palette: global_palette
+    compress: zx0
+    images:
+      - imgs/growmi_mag_tail.png
+      - imgs/growmi_snake_head.png
+
+outputs:
+  - type: c
+    include-file: gfx.h
+    palettes:
+      - global_palette
+    converts:
+      - sprite
+
