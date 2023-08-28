@@ -8,12 +8,14 @@ palettes:
 converts:
   - name: tileset
     palette: global_palette
-    compress: zx7
     tilesets:
       tile-width: 18
       tile-height: 18
       images:
         - tileset.png
+  - name: bg
+    palette: global_palette
+    compress: zx7
     images:
       - clouds.png
 outputs:
@@ -23,4 +25,4 @@ outputs:
       - global_palette
     converts:
       - tileset
-
+      - bg

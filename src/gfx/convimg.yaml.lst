@@ -1,7 +1,7 @@
 global_palette.h
 global_palette.c
-clouds.h
-clouds.c
 tileset.h
 tileset.c
+clouds.h
+clouds.c
 gfx.h
