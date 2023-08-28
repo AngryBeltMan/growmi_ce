@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "snake.h"
+#include "tiles.h"
 #include "gfx/gfx.h"
 
 /* extern unsigned char tilemap_map[]; */
@@ -16,15 +17,15 @@ int main(void) {
 
     /* Initialize the tilemap structure */
     unsigned char* map = malloc(18 * 14);
-    memset(map, 0x01, 18 * 14);
+    memset(map, TileType_Transparent, 18 * 14);
     tilemap.map = map;
     tilemap.tiles = tileset_tiles;
     tilemap.type_width = 18;
     tilemap.type_height = 18;
     tilemap.tile_height = 18;
     tilemap.tile_width = 18;
-    tilemap.draw_height = 18;
-    tilemap.draw_width = 14;
+    tilemap.draw_height = 10;
+    tilemap.draw_width = 13;
     tilemap.height = 10;
     tilemap.width = 13;
     tilemap.y_loc = 0;
@@ -32,19 +33,16 @@ int main(void) {
     Snake snake = SNAKE_init();
 
     gfx_Begin();
+    gfx_SetTransparentColor(1);
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
-    gfx_SetTransparentColor(0);
     gfx_SetDrawBuffer();
-    gfx_FillScreen(1);
     do {
         gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
-        gfx_SetColor(1);
-        gfx_Rectangle(10,10,100,100);
         // clear the screen
         /* SNAKE_move(&snake); */
         /* SNAKE_draw(&snake); */
         gfx_SwapDraw();
-    } while (1 == 1);
+    } while (!SHOULD_EXIT);
 #ifdef DEBUG
     dbg_printf("exiting, cleaning up ... ");
 #endif
