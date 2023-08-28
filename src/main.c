@@ -16,7 +16,7 @@ int main(void) {
 
     /* Initialize the tilemap structure */
     unsigned char* map = malloc(18 * 14);
-    memset(map, 0x02, 18 * 14);
+    memset(map, 0x01, 18 * 14);
     tilemap.map = map;
     tilemap.tiles = tileset_tiles;
     tilemap.type_width = 18;
@@ -25,8 +25,8 @@ int main(void) {
     tilemap.tile_width = 18;
     tilemap.draw_height = 18;
     tilemap.draw_width = 14;
-    tilemap.height = 18;
-    tilemap.width = 14;
+    tilemap.height = 10;
+    tilemap.width = 13;
     tilemap.y_loc = 0;
     tilemap.x_loc = 0;
     Snake snake = SNAKE_init();
