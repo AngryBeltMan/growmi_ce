@@ -3,17 +3,23 @@
 #include <debug.h>
 #include <stdlib.h>
 #include <string.h>
+#include "gfx/clouds.h"
+#include "gfx/tileset.h"
 #include "snake.h"
 #include "tiles.h"
 #include "gfx/gfx.h"
 
 /* extern unsigned char tilemap_map[]; */
+gfx_sprite_t *tileset_tiles[128];
 
+/* This is where the decompressed tilemap data is stored */
+uint8_t tilemap_map[10 * 13];
 int main(void) {
     uint8_t key;
     unsigned int x_offset = 0;
     unsigned int y_offset = 0;
     gfx_tilemap_t tilemap;
+    gfx_sprite_t *tmp_ptr;
 
     /* Initialize the tilemap structure */
     unsigned char* map = malloc(18 * 14);
@@ -30,9 +36,18 @@ int main(void) {
     tilemap.width = 13;
     tilemap.y_loc = 0;
     tilemap.x_loc = 0;
+    for (unsigned int i = 0; i < sizeof(tileset_tiles) / sizeof(gfx_sprite_t*); ++i) {
+        tmp_ptr = gfx_MallocSprite(TILE_WIDTH, TILE_HEIGHT);
+        zx7_Decompress(tmp_ptr, tileset_tiles_compressed[i]);
+        tileset_tiles[i] = tmp_ptr;
+    }
+    /* Decompress the compressed tilemap */
+    zx7_Decompress(tileset_tiles, tileset_tiles_compressed);
+
     Snake snake = SNAKE_init();
 
     gfx_Begin();
+    /* gfx_Sprite(clouds, 0, 0); */
     gfx_SetTransparentColor(1);
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     gfx_SetDrawBuffer();

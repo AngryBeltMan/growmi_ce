@@ -8,11 +8,14 @@ palettes:
 converts:
   - name: tileset
     palette: global_palette
+    compress: zx7
     tilesets:
       tile-width: 18
       tile-height: 18
       images:
         - tileset.png
+    images:
+      - clouds.png
 outputs:
   - type: c
     include-file: gfx.h
