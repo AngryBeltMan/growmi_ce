@@ -42,8 +42,8 @@ int main(void) {
     gfx_SetTransparentColor(1);
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     gfx_SetDrawBuffer();
-    gfx_Sprite(background, 0, 0);
     do {
+        gfx_Sprite(background, 0, 0);
         gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
         // clear the screen
         /* SNAKE_move(&snake); */
