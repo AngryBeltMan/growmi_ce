@@ -1,0 +1,9 @@
+#ifndef COLLISION_H
+#define COLLISION_H
+typedef enum {
+   CollisionType_SNAKE,
+   CollisionType_BOX,
+   CollisionType_WALL,
+   CollisionType_None,
+} CollisionType;
+#endif

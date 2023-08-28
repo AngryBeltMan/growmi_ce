@@ -19,13 +19,32 @@ typedef enum {
 static inline KeyInput get_input() {
     // scans what keys were pressed
     kb_Scan();
-    if (kb_IsDown(kb_Down)) return InputDown;
-    if (kb_IsDown(kb_Up)) return InputUp;
-    if (kb_IsDown(kb_Left)) return InputLeft;
-    if (kb_IsDown(kb_Right)) return InputRight;
-    if (kb_IsDown(kb_Clear)) return InputClear;
-    if (kb_IsDown(kb_2nd)) return Input2nd;
-    if (kb_IsDown(kb_Alpha)) return InputAlpha;
+    //  is the section where the arrow keys are located
+    if (kb_Data[7] & kb_Down) return InputDown;
+    if (kb_Data[7] & kb_Up) return InputUp;
+    if (kb_Data[7] & kb_Left) return InputLeft;
+    if (kb_Data[7] & kb_Right) return InputRight;
+    /* if (kb_Data[7]) { */
+    /*     switch (kb_Data[7]) { */
+    /*         case kb_Down: { */
+    /*                           return InputDown; */
+    /*                           break; */
+    /*                       } */
+    /*         case kb_Up: { */
+    /*                         return InputUp; */
+    /*                         break; */
+    /*                     } */
+    /*         case kb_Left: { */
+    /*                           return InputLeft; */
+    /*                           break; */
+    /*                       } */
+    /*         case kb_Right: { */
+    /*                            return InputRight; */
+    /*                            break; */
+    /*                        } */
+    /*         default: break; */
+    /*     } */
+    /* } */
     return InputOther;
 }
 
