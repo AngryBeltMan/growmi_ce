@@ -44,7 +44,7 @@ int main(void) {
     zx7_Decompress(gfx_vram, clouds_compressed);
     do {
         /* gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset); */
-        gfx_FillScreen(32);
+        /* gfx_FillScreen(32); */
         // clear the screen
         /* SNAKE_move(&snake); */
         /* SNAKE_draw(&snake); */
