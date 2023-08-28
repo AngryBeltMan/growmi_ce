@@ -39,12 +39,13 @@ int main(void) {
     Snake snake = SNAKE_init();
 
     gfx_Begin();
-    gfx_SetTransparentColor(1);
+    /* gfx_SetTransparentColor(1); */
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     gfx_SetDrawBuffer();
     do {
         gfx_Sprite(background, 0, 0);
         gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
+        gfx_FillScreen(1);
         // clear the screen
         /* SNAKE_move(&snake); */
         /* SNAKE_draw(&snake); */
