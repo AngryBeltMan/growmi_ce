@@ -16,6 +16,7 @@ converts:
   - name: bg
     palette: global_palette
     compress: zx7
+    width-and-height: false
     images:
       - clouds.png
 outputs:

@@ -2,14 +2,14 @@ Section          Base   Top    High   Length
 ---------------- ------ ------ ------ -------
 .icon            D1A882 D1A9AF           12Dh
 .init.libs       D1A9AF D1AA07            58h
-.libs            D1AA07 D1AA3A            33h
-.init.clock      D1AA3A D1AA3A             0h
-.init.reruncheck D1AA3A D1AA3A             0h
-.init            D1AA3A D1AA64            2Ah
-.fini            D1AA64 D1AA98            34h
-.text            D1AA98 D1ACBE           226h
-.data            D1ACBE D1D34E          2690h
-.rodata          D1D34E D1D370            22h
+.libs            D1AA07 D1AA2E            27h
+.init.clock      D1AA2E D1AA2E             0h
+.init.reruncheck D1AA2E D1AA2E             0h
+.init            D1AA2E D1AA58            2Ah
+.fini            D1AA58 D1AA8C            34h
+.text            D1AA8C D1AC3F           1B3h
+.data            D1AC3F D1B2AC           66Dh
+.rodata          D1B2AC D1B2CE            22h
 .init_array      000000 000000             0h
 .ctors           000000 000000             0h
 .dtors           000000 000000             0h
@@ -29,60 +29,31 @@ ___ctors_count            = 000000
 ___dtors_count            = 000000
 ___fini_array_count       = 000000
 __stack                   = D1A87E
-__frameset                = D1AA98
-_os_DisableHomeTextBuffer = D1AAA6
-_os_EnableHomeTextBuffer  = D1AAB8
-_zx7_Decompress           = D1AACA
-_malloc                   = D1AB31
+__frameset                = D1AA8C
+_os_DisableHomeTextBuffer = D1AA9A
+_os_EnableHomeTextBuffer  = D1AAAC
+_zx7_Decompress           = D1AABE
+_malloc                   = D1AB25
 __alloc_base              = D052C6
-_sbrk                     = D1ABD0
-__sbrkbase                = D1ACBE
-.missingappvar            = D1D34E
-.libloadname              = D1D353
+_sbrk                     = D1ABC4
+__sbrkbase                = D1AC3F
+.missingappvar            = D1B2AC
+.libloadname              = D1B2B1
 .libloadnamelen           = 000007
-.webaddress               = D1D35B
-__start                   = D1AA3A
-___exithl                 = D1AA64
-skip._exit                = D1AA64
-skip.__Exit               = D1AA64
-skip._abort               = D1AA64
-_exit.sp                  = D1AA65
-_exit.flash_wait_states   = D1AA6F
-_main                     = D1ABEE
-_tileset_tile_0_data      = D1ACC1
-_tileset_tile_1_data      = D1AE07
-_tileset_tile_2_data      = D1AF4D
-_tileset_tile_3_data      = D1B093
-_tileset_tile_4_data      = D1B1D9
-_tileset_tile_5_data      = D1B31F
-_tileset_tile_6_data      = D1B465
-_tileset_tile_7_data      = D1B5AB
-_tileset_tile_8_data      = D1B6F1
-_tileset_tile_9_data      = D1B837
-_tileset_tile_10_data     = D1B97D
-_tileset_tile_11_data     = D1BAC3
-_tileset_tile_12_data     = D1BC09
-_tileset_tile_13_data     = D1BD4F
-_tileset_tile_14_data     = D1BE95
-_tileset_tile_15_data     = D1BFDB
-_tileset_tile_16_data     = D1C121
-_tileset_tile_17_data     = D1C267
-_tileset_tile_18_data     = D1C3AD
-_tileset_tile_19_data     = D1C4F3
-_tileset_tile_20_data     = D1C639
-_tileset_tile_21_data     = D1C77F
-_tileset_tile_22_data     = D1C8C5
-_tileset_tile_23_data     = D1CA0B
-_tileset_tile_24_data     = D1CB51
-_clouds_compressed        = D1CC97
-_tileset_tiles_data       = D1D2CF
-_global_palette           = D1D31A
+.webaddress               = D1B2B9
+__start                   = D1AA2E
+___exithl                 = D1AA58
+skip._exit                = D1AA58
+skip.__Exit               = D1AA58
+skip._abort               = D1AA58
+_exit.sp                  = D1AA59
+_exit.flash_wait_states   = D1AA63
+_main                     = D1ABE2
+_global_palette           = D1AC42
+_clouds_compressed        = D1AC76
 lib.LibLoad               = D1AA07
 _#gfx_Begin               = D1AA1A
 _#gfx_SetPalette          = D1AA1E
 _#gfx_FillScreen          = D1AA22
 _#gfx_SetDraw             = D1AA26
 _#gfx_SwapDraw            = D1AA2A
-_#gfx_Tilemap_NoClip      = D1AA2E
-_#gfx_AllocSprite         = D1AA32
-_#gfx_Sprite              = D1AA36

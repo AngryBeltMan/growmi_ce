@@ -16,9 +16,7 @@ int main(void) {
     uint8_t key;
     unsigned int x_offset = 0;
     unsigned int y_offset = 0;
-    gfx_sprite_t *background;
-    background = gfx_MallocSprite(clouds_width,clouds_height);
-    zx7_Decompress(background, clouds_compressed);
+
     gfx_tilemap_t tilemap;
 
     /* Initialize the tilemap structure */
@@ -40,12 +38,13 @@ int main(void) {
 
     gfx_Begin();
     /* gfx_SetTransparentColor(1); */
-    gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     gfx_SetDrawBuffer();
+
+    gfx_SetPalette(global_palette, sizeof_global_palette, 0);
+    zx7_Decompress(gfx_vram, clouds_compressed);
     do {
-        gfx_Sprite(background, 0, 0);
-        gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
-        gfx_FillScreen(1);
+        /* gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset); */
+        gfx_FillScreen(32);
         // clear the screen
         /* SNAKE_move(&snake); */
         /* SNAKE_draw(&snake); */
@@ -54,7 +53,6 @@ int main(void) {
 #ifdef DEBUG
     dbg_printf("exiting, cleaning up ... ");
 #endif
-    free(background);
     gfx_End();
     SNAKE_FREE(snake);
 #ifdef DEBUG
