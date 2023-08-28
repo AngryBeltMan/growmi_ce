@@ -33,10 +33,13 @@ int main(void) {
 
     gfx_Begin();
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
+    gfx_SetTransparentColor(0);
     gfx_SetDrawBuffer();
-    gfx_FillScreen(0);
+    gfx_FillScreen(1);
     do {
         gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
+        gfx_SetColor(1);
+        gfx_Rectangle(10,10,100,100);
         // clear the screen
         /* SNAKE_move(&snake); */
         /* SNAKE_draw(&snake); */
