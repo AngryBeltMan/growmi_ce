@@ -34,16 +34,18 @@ int main(void) {
     tilemap.width = 13;
     tilemap.y_loc = 0;
     tilemap.x_loc = 0;
+    unsigned int trans = 0;
     Snake snake = SNAKE_init();
 
     gfx_Begin();
-    gfx_SetTransparentColor(0);
     /* gfx_SetTransparentColor(0); */
     /* gfx_SetDrawBuffer(); */
 
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     zx7_Decompress(gfx_vram, growmi_bg_compressed);
     do {
+        gfx_SetTransparentColor(++trans);
+        if (trans > 255) trans = 0;
         gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
         /* gfx_SetColor(69); */
         /* gfx_FillRectangle(50,50,50,50); */
