@@ -21,7 +21,7 @@ int main(void) {
 
     /* Initialize the tilemap structure */
     unsigned char* map = malloc(18 * 14);
-    memset(map, TileType_SnakeHead, 18 * 14);
+    memset(map, TileType_Transparent, 18 * 14);
     tilemap.map = map;
     tilemap.tiles = tileset_tiles;
     tilemap.type_width = 18;

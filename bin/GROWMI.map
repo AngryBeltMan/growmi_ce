@@ -7,9 +7,9 @@ Section          Base   Top    High   Length
 .init.reruncheck D1AA2E D1AA2E             0h
 .init            D1AA2E D1AA58            2Ah
 .fini            D1AA58 D1AA8C            34h
-.text            D1AA8C D1ACDB           24Fh
-.data            D1ACDB D20014          5339h
-.rodata          D20014 D20036            22h
+.text            D1AA8C D1AC83           1F7h
+.data            D1AC83 D1FFBC          5339h
+.rodata          D1FFBC D1FFDE            22h
 .init_array      000000 000000             0h
 .ctors           000000 000000             0h
 .dtors           000000 000000             0h
@@ -30,20 +30,17 @@ ___dtors_count            = 000000
 ___fini_array_count       = 000000
 __stack                   = D1A87E
 __frameset                = D1AA8C
-__imulu                   = D1AA9A
-_os_DisableHomeTextBuffer = D1AACA
-_os_EnableHomeTextBuffer  = D1AADC
-_zx7_Decompress           = D1AAEE
-_malloc                   = D1AB55
+_os_DisableHomeTextBuffer = D1AA9A
+_os_EnableHomeTextBuffer  = D1AAAC
+_zx7_Decompress           = D1AABE
+_malloc                   = D1AB25
 __alloc_base              = D052C6
-_calloc                   = D1ABF4
-_memset                   = D1AC12
-_sbrk                     = D1AC29
-__sbrkbase                = D1ACDB
-.missingappvar            = D20014
-.libloadname              = D20019
+_sbrk                     = D1ABC4
+__sbrkbase                = D1AC83
+.missingappvar            = D1FFBC
+.libloadname              = D1FFC1
 .libloadnamelen           = 000007
-.webaddress               = D20021
+.webaddress               = D1FFC9
 __start                   = D1AA2E
 ___exithl                 = D1AA58
 skip._exit                = D1AA58
@@ -51,35 +48,35 @@ skip.__Exit               = D1AA58
 skip._abort               = D1AA58
 _exit.sp                  = D1AA59
 _exit.flash_wait_states   = D1AA63
-_main                     = D1AC47
-_tileset_tile_0_data      = D1ACDE
-_tileset_tile_1_data      = D1AE24
-_tileset_tile_2_data      = D1AF6A
-_tileset_tile_3_data      = D1B0B0
-_tileset_tile_4_data      = D1B1F6
-_tileset_tile_5_data      = D1B33C
-_tileset_tile_6_data      = D1B482
-_tileset_tile_7_data      = D1B5C8
-_tileset_tile_8_data      = D1B70E
-_tileset_tile_9_data      = D1B854
-_tileset_tile_10_data     = D1B99A
-_tileset_tile_11_data     = D1BAE0
-_tileset_tile_12_data     = D1BC26
-_tileset_tile_13_data     = D1BD6C
-_tileset_tile_14_data     = D1BEB2
-_tileset_tile_15_data     = D1BFF8
-_tileset_tile_16_data     = D1C13E
-_tileset_tile_17_data     = D1C284
-_tileset_tile_18_data     = D1C3CA
-_tileset_tile_19_data     = D1C510
-_tileset_tile_20_data     = D1C656
-_tileset_tile_21_data     = D1C79C
-_tileset_tile_22_data     = D1C8E2
-_tileset_tile_23_data     = D1CA28
-_tileset_tile_24_data     = D1CB6E
-_tileset_tiles_data       = D1CCB4
-_global_palette           = D1CCFF
-_growmi_bg_compressed     = D1CEFF
+_main                     = D1ABE2
+_tileset_tile_0_data      = D1AC86
+_tileset_tile_1_data      = D1ADCC
+_tileset_tile_2_data      = D1AF12
+_tileset_tile_3_data      = D1B058
+_tileset_tile_4_data      = D1B19E
+_tileset_tile_5_data      = D1B2E4
+_tileset_tile_6_data      = D1B42A
+_tileset_tile_7_data      = D1B570
+_tileset_tile_8_data      = D1B6B6
+_tileset_tile_9_data      = D1B7FC
+_tileset_tile_10_data     = D1B942
+_tileset_tile_11_data     = D1BA88
+_tileset_tile_12_data     = D1BBCE
+_tileset_tile_13_data     = D1BD14
+_tileset_tile_14_data     = D1BE5A
+_tileset_tile_15_data     = D1BFA0
+_tileset_tile_16_data     = D1C0E6
+_tileset_tile_17_data     = D1C22C
+_tileset_tile_18_data     = D1C372
+_tileset_tile_19_data     = D1C4B8
+_tileset_tile_20_data     = D1C5FE
+_tileset_tile_21_data     = D1C744
+_tileset_tile_22_data     = D1C88A
+_tileset_tile_23_data     = D1C9D0
+_tileset_tile_24_data     = D1CB16
+_tileset_tiles_data       = D1CC5C
+_global_palette           = D1CCA7
+_growmi_bg_compressed     = D1CEA7
 lib.LibLoad               = D1AA07
 _#gfx_Begin               = D1AA1A
 _#gfx_SetPalette          = D1AA1E
