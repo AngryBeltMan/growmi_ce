@@ -37,15 +37,16 @@ int main(void) {
     Snake snake = SNAKE_init();
 
     gfx_Begin();
+    gfx_SetTransparentColor(0);
     /* gfx_SetTransparentColor(0); */
-    gfx_SetDrawBuffer();
+    /* gfx_SetDrawBuffer(); */
 
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     zx7_Decompress(gfx_vram, growmi_bg_compressed);
     do {
-        /* gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset); */
-        gfx_SetColor(69);
-        gfx_FillRectangle(50,50,50,50);
+        gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
+        /* gfx_SetColor(69); */
+        /* gfx_FillRectangle(50,50,50,50); */
         /* gfx_FillScreen(32); */
         // clear the screen
         /* SNAKE_move(&snake); */
