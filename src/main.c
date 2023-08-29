@@ -41,9 +41,12 @@ int main(void) {
 
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     zx7_Decompress(gfx_vram, growmi_bg_compressed);
+    uint8_t clear = gfx_SetTransparentColor(0);
+    dbg_printf("BG color: %i\n", clear);
     do {
-        /* gfx_SetTransparentColor(0); */
         gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
+        gfx_SetColor(clear);
+        gfx_FillRectangle(100,100,100,100);
         /* gfx_PrintString("fjkldasjfkld"); */
         /* gfx_FillScreen(32); */
         // clear the screen
