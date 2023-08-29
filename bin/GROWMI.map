@@ -2,14 +2,14 @@ Section          Base   Top    High   Length
 ---------------- ------ ------ ------ -------
 .icon            D1A882 D1A9AF           12Dh
 .init.libs       D1A9AF D1AA07            58h
-.libs            D1AA07 D1AA2A            23h
-.init.clock      D1AA2A D1AA2A             0h
-.init.reruncheck D1AA2A D1AA2A             0h
-.init            D1AA2A D1AA54            2Ah
-.fini            D1AA54 D1AA88            34h
-.text            D1AA88 D1AC7B           1F3h
-.data            D1AC7B D1FFA5          532Ah
-.rodata          D1FFA5 D1FFD4            2Fh
+.libs            D1AA07 D1AA26            1Fh
+.init.clock      D1AA26 D1AA26             0h
+.init.reruncheck D1AA26 D1AA26             0h
+.init            D1AA26 D1AA50            2Ah
+.fini            D1AA50 D1AA84            34h
+.text            D1AA84 D1ACC5           241h
+.data            D1ACC5 D1FFEF          532Ah
+.rodata          D1FFEF D20011            22h
 .init_array      000000 000000             0h
 .ctors           000000 000000             0h
 .dtors           000000 000000             0h
@@ -29,57 +29,58 @@ ___ctors_count            = 000000
 ___dtors_count            = 000000
 ___fini_array_count       = 000000
 __stack                   = D1A87E
-__frameset                = D1AA88
-_os_DisableHomeTextBuffer = D1AA96
-_os_EnableHomeTextBuffer  = D1AAA8
-_zx7_Decompress           = D1AABA
-_malloc                   = D1AB21
+__frameset                = D1AA84
+__imulu                   = D1AA92
+_os_DisableHomeTextBuffer = D1AAC2
+_os_EnableHomeTextBuffer  = D1AAD4
+_zx7_Decompress           = D1AAE6
+_malloc                   = D1AB4D
 __alloc_base              = D052C6
-_sbrk                     = D1ABC0
-__sbrkbase                = D1AC7B
-.missingappvar            = D1FFA5
-.libloadname              = D1FFAA
+_calloc                   = D1ABEC
+_memset                   = D1AC0A
+_sbrk                     = D1AC21
+__sbrkbase                = D1ACC5
+.missingappvar            = D1FFEF
+.libloadname              = D1FFF4
 .libloadnamelen           = 000007
-.webaddress               = D1FFB2
-__start                   = D1AA2A
-___exithl                 = D1AA54
-skip._exit                = D1AA54
-skip.__Exit               = D1AA54
-skip._abort               = D1AA54
-_exit.sp                  = D1AA55
-_exit.flash_wait_states   = D1AA5F
-_main                     = D1ABDE
-_tileset_tile_0_data      = D1AC7E
-_tileset_tile_1_data      = D1ADC4
-_tileset_tile_2_data      = D1AF0A
-_tileset_tile_3_data      = D1B050
-_tileset_tile_4_data      = D1B196
-_tileset_tile_5_data      = D1B2DC
-_tileset_tile_6_data      = D1B422
-_tileset_tile_7_data      = D1B568
-_tileset_tile_8_data      = D1B6AE
-_tileset_tile_9_data      = D1B7F4
-_tileset_tile_10_data     = D1B93A
-_tileset_tile_11_data     = D1BA80
-_tileset_tile_12_data     = D1BBC6
-_tileset_tile_13_data     = D1BD0C
-_tileset_tile_14_data     = D1BE52
-_tileset_tile_15_data     = D1BF98
-_tileset_tile_16_data     = D1C0DE
-_tileset_tile_17_data     = D1C224
-_tileset_tile_18_data     = D1C36A
-_tileset_tile_19_data     = D1C4B0
-_tileset_tile_20_data     = D1C5F6
-_tileset_tile_21_data     = D1C73C
-_tileset_tile_22_data     = D1C882
-_tileset_tile_23_data     = D1C9C8
-_tileset_tile_24_data     = D1CB0E
-_tileset_tiles_data       = D1CC54
-_global_palette           = D1CC9F
-_growmi_bg_compressed     = D1CE9F
-_.str                     = D1FFC7
+.webaddress               = D1FFFC
+__start                   = D1AA26
+___exithl                 = D1AA50
+skip._exit                = D1AA50
+skip.__Exit               = D1AA50
+skip._abort               = D1AA50
+_exit.sp                  = D1AA51
+_exit.flash_wait_states   = D1AA5B
+_main                     = D1AC3F
+_tileset_tile_0_data      = D1ACC8
+_tileset_tile_1_data      = D1AE0E
+_tileset_tile_2_data      = D1AF54
+_tileset_tile_3_data      = D1B09A
+_tileset_tile_4_data      = D1B1E0
+_tileset_tile_5_data      = D1B326
+_tileset_tile_6_data      = D1B46C
+_tileset_tile_7_data      = D1B5B2
+_tileset_tile_8_data      = D1B6F8
+_tileset_tile_9_data      = D1B83E
+_tileset_tile_10_data     = D1B984
+_tileset_tile_11_data     = D1BACA
+_tileset_tile_12_data     = D1BC10
+_tileset_tile_13_data     = D1BD56
+_tileset_tile_14_data     = D1BE9C
+_tileset_tile_15_data     = D1BFE2
+_tileset_tile_16_data     = D1C128
+_tileset_tile_17_data     = D1C26E
+_tileset_tile_18_data     = D1C3B4
+_tileset_tile_19_data     = D1C4FA
+_tileset_tile_20_data     = D1C640
+_tileset_tile_21_data     = D1C786
+_tileset_tile_22_data     = D1C8CC
+_tileset_tile_23_data     = D1CA12
+_tileset_tile_24_data     = D1CB58
+_tileset_tiles_data       = D1CC9E
+_global_palette           = D1CCE9
+_growmi_bg_compressed     = D1CEE9
 lib.LibLoad               = D1AA07
 _#gfx_Begin               = D1AA1A
 _#gfx_SetPalette          = D1AA1E
-_#gfx_PrintString         = D1AA22
-_#gfx_Tilemap_NoClip      = D1AA26
+_#gfx_Tilemap_NoClip      = D1AA22
