@@ -8,8 +8,8 @@ Section          Base   Top    High   Length
 .init            D1AA2A D1AA54            2Ah
 .fini            D1AA54 D1AA88            34h
 .text            D1AA88 D1AC31           1A9h
-.data            D1AC31 D1B29E           66Dh
-.rodata          D1B29E D1B2C0            22h
+.data            D1AC31 D1DF49          3318h
+.rodata          D1DF49 D1DF6B            22h
 .init_array      000000 000000             0h
 .ctors           000000 000000             0h
 .dtors           000000 000000             0h
@@ -37,10 +37,10 @@ _malloc                   = D1AB21
 __alloc_base              = D052C6
 _sbrk                     = D1ABC0
 __sbrkbase                = D1AC31
-.missingappvar            = D1B29E
-.libloadname              = D1B2A3
+.missingappvar            = D1DF49
+.libloadname              = D1DF4E
 .libloadnamelen           = 000007
-.webaddress               = D1B2AB
+.webaddress               = D1DF56
 __start                   = D1AA2A
 ___exithl                 = D1AA54
 skip._exit                = D1AA54
@@ -50,7 +50,7 @@ _exit.sp                  = D1AA55
 _exit.flash_wait_states   = D1AA5F
 _main                     = D1ABDE
 _global_palette           = D1AC34
-_clouds_compressed        = D1AC68
+_growmi_bg_compressed     = D1AE34
 lib.LibLoad               = D1AA07
 _#gfx_Begin               = D1AA1A
 _#gfx_SetPalette          = D1AA1E

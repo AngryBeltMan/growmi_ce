@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <compression.h>
-#include "gfx/clouds.h"
+#include "gfx/growmi_bg.h"
 #include "gfx/tileset.h"
 #include "snake.h"
 #include "tiles.h"
@@ -28,8 +28,8 @@ int main(void) {
     tilemap.type_height = 18;
     tilemap.tile_height = 18;
     tilemap.tile_width = 18;
-    tilemap.draw_height = 18;
-    tilemap.draw_width = 14;
+    tilemap.draw_height = 10;
+    tilemap.draw_width = 13;
     tilemap.height = 10;
     tilemap.width = 13;
     tilemap.y_loc = 0;
@@ -41,7 +41,7 @@ int main(void) {
     gfx_SetDrawBuffer();
 
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
-    zx7_Decompress(gfx_vram, clouds_compressed);
+    zx7_Decompress(gfx_vram, growmi_bg_compressed);
     do {
         /* gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset); */
         /* gfx_FillScreen(32); */

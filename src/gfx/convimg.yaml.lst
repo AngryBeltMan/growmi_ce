@@ -2,6 +2,6 @@ global_palette.h
 global_palette.c
 tileset.h
 tileset.c
-clouds.h
-clouds.c
+growmi_bg.h
+growmi_bg.c
 gfx.h
