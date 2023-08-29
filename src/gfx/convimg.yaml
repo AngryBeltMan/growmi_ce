@@ -8,6 +8,7 @@ palettes:
 converts:
   - name: tileset
     palette: global_palette
+    transparent-color-index: 0
     tilesets:
       tile-width: 18
       tile-height: 18
