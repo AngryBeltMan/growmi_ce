@@ -21,7 +21,7 @@ int main(void) {
 
     /* Initialize the tilemap structure */
     unsigned char* map = malloc(18 * 14);
-    memset(map, 0x04, 18 * 14);
+    memset(map, 0x05, 18 * 14);
     tilemap.map = map;
     tilemap.tiles = tileset_tiles;
     tilemap.type_width = 18;
@@ -44,6 +44,7 @@ int main(void) {
     do {
         /* gfx_SetTransparentColor(0); */
         gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
+        gfx_PrintString("fjkldasjfkld");
         /* gfx_FillScreen(32); */
         // clear the screen
         /* SNAKE_move(&snake); */
