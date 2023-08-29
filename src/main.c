@@ -37,7 +37,7 @@ int main(void) {
     Snake snake = SNAKE_init();
 
     gfx_Begin();
-    /* gfx_SetTransparentColor(0); */
+    gfx_SetTransparentColor(0);
     /* gfx_SetDrawBuffer(); */
 
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
