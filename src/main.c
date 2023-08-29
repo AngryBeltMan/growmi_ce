@@ -21,7 +21,7 @@ int main(void) {
 
     /* Initialize the tilemap structure */
     unsigned char* map = malloc(18 * 14);
-    memset(map, TileType_Transparent, 18 * 14);
+    memset(map, TileType_SnakeHead, 18 * 14);
     tilemap.map = map;
     tilemap.tiles = tileset_tiles;
     tilemap.type_width = 18;
@@ -43,7 +43,7 @@ int main(void) {
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     zx7_Decompress(gfx_vram, growmi_bg_compressed);
     do {
-        /* gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset); */
+        gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
         /* gfx_FillScreen(32); */
         // clear the screen
         /* SNAKE_move(&snake); */
