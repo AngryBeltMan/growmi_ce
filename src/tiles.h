@@ -5,5 +5,6 @@ typedef enum {
     TileType_PurpleBlock = 0x01,
     TileType_SnakeBody = 0x02,
     TileType_Transparent = 0x03,
+    TileType_OTransparent = 0x04,
 } TileType;
 #endif
