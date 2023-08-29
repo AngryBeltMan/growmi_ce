@@ -43,7 +43,7 @@ int main(void) {
     gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     zx7_Decompress(gfx_vram, growmi_bg_compressed);
     do {
-        gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset);
+        /* gfx_Tilemap_NoClip(&tilemap, x_offset, y_offset); */
         gfx_SetColor(69);
         gfx_FillRectangle(50,50,50,50);
         /* gfx_FillScreen(32); */
