@@ -24,6 +24,8 @@ static inline KeyInput get_input() {
     if (kb_Data[7] & kb_Up) return InputUp;
     if (kb_Data[7] & kb_Left) return InputLeft;
     if (kb_Data[7] & kb_Right) return InputRight;
+
+    if (kb_Data[2] & kb_Alpha) return InputAlpha;
     /* if (kb_Data[7]) { */
     /*     switch (kb_Data[7]) { */
     /*         case kb_Down: { */

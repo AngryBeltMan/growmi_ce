@@ -13,12 +13,6 @@ converts:
       tile-height: 18
       images:
         - tileset.png
-  - name: bg
-    palette: global_palette
-    compress: zx7
-    width-and-height: false
-    images:
-      - growmi_bg.png
 outputs:
   - type: c
     include-file: gfx.h
@@ -26,4 +20,3 @@ outputs:
       - global_palette
     converts:
       - tileset
-      - bg
